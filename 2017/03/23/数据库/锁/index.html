@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>视频小demo | Hexo</title>
+  <title>数据库锁 | Hexo</title>
   <meta name="keywords" content=" hexo , 3-hexo ">
-  <meta name="description" content="视频小demo | Hexo">
+  <meta name="description" content="数据库锁 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="接口列表   接口 说明    &#x2F;p&#x2F;global&#x2F;strategy 请求全局策略   &#x2F;p&#x2F;user&#x2F;userLogin 用户登录接口        ##错误码列表|  错误码  | 说明 ||—— |—– ||   0   | 正确 ||   1   | 错误 ||   2   | 参数错误| 接口详情 全局策略 接口地址：&#x2F;p&#x2F;global&#x2F;strategy  返回格式：Json  请求方式">
 <meta property="og:type" content="article">
@@ -460,9 +460,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-视频/视频" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据库/锁" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">视频小demo</h1>
+        <h1 class="article-title">数据库锁</h1>
     
     <div class="article-meta">
         
@@ -472,7 +472,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="其他">其他</a>
+            <a  data-rel="数据库">数据库</a>
             
         </span>
         
@@ -489,7 +489,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-06-15 22:30:17'>2017-03-23 15:13</time>
+            Created At : <time class="date" title='Updated At: 2022-06-16 16:05:06'>2017-03-23 15:13</time>
         
     </div>
     <div class="article-meta">
@@ -511,7 +511,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">1. git常用命令</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E9%94%81"><span class="toc-text">数据库中常见的锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%B4%E9%9A%99%E9%94%81"><span class="toc-text">间隙锁</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE"><span class="toc-text">模拟数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E4%B8%80"><span class="toc-text">事务一:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E4%BA%8C"><span class="toc-text">事务二:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%B0%E8%B1%A1%E5%88%86%E6%9E%90"><span class="toc-text">现象分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%B4%E9%9A%99%E9%94%81%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0"><span class="toc-text">间隙锁产生原因</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%BB%E9%94%81%E5%9C%BA%E6%99%AF"><span class="toc-text">死锁场景</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E9%94%81%E9%A1%BA%E5%BA%8F%E4%B8%8D%E4%B8%80%E8%87%B4%E5%AF%BC%E8%87%B4%E6%AD%BB%E9%94%81"><span class="toc-text">获取锁顺序不一致导致死锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E4%B8%80-1"><span class="toc-text">事务一:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E4%BA%8C-1"><span class="toc-text">事务二:</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -527,7 +527,111 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-git常用命令"><a href="#1-git常用命令" class="headerlink" title="1. git常用命令"></a>1. git常用命令</h2><p><video src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
+        <h2 id="数据库中常见的锁"><a href="#数据库中常见的锁" class="headerlink" title="数据库中常见的锁"></a>数据库中常见的锁</h2><h3 id="间隙锁"><a href="#间隙锁" class="headerlink" title="间隙锁"></a>间隙锁</h3><h4 id="模拟数据"><a href="#模拟数据" class="headerlink" title="模拟数据"></a>模拟数据</h4><table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>aa</td>
+</tr>
+<tr>
+<td>3</td>
+<td>bb</td>
+</tr>
+<tr>
+<td>8</td>
+<td>cc</td>
+</tr>
+</tbody></table>
+<h4 id="事务一"><a href="#事务一" class="headerlink" title="事务一:"></a>事务一:</h4><hr>
+<pre><code>    begin;
+    select * from test_deadlock where id=5 for update;
+    
+    commit;
+    ROLLBACK;
+</code></pre>
+<hr>
+<h4 id="事务二"><a href="#事务二" class="headerlink" title="事务二:"></a>事务二:</h4><hr>
+<pre><code>    begin;
+    -- 插入（3, 5）之间的数据 锁等待
+    insert into test_deadlock VALUES(4, &#39;aa&#39;)
+    
+    -- 插入（5, 8）之间的数据 锁等待
+    insert into test_deadlock VALUES(7, &#39;aa&#39;)
+    
+    -- 插入（8, ++）之间的数据 正常
+    insert into test_deadlock VALUES(9, &#39;aa&#39;)
+    
+    commit;
+    ROLLBACK;
+</code></pre>
+<hr>
+<h4 id="现象分析"><a href="#现象分析" class="headerlink" title="现象分析"></a>现象分析</h4><p>锁不存在的数据时会产生间隙锁<br>间隙锁范围: （3, 5） （5, 8）</p>
+<p>锁已存在的数据时，不会产生间隙锁（GAP）</p>
+<h4 id="间隙锁产生原因"><a href="#间隙锁产生原因" class="headerlink" title="间隙锁产生原因"></a>间隙锁产生原因</h4><p>为了解决幻读问题，早期的rr还是会产生幻读问题的，后来引入了GPA间隙锁才解决了幻读的问题</p>
+<h3 id="死锁场景"><a href="#死锁场景" class="headerlink" title="死锁场景"></a>死锁场景</h3><h4 id="获取锁顺序不一致导致死锁"><a href="#获取锁顺序不一致导致死锁" class="headerlink" title="获取锁顺序不一致导致死锁"></a>获取锁顺序不一致导致死锁</h4><p> 两条update语句即可导致死锁</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>aa</td>
+<td>10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>bb</td>
+<td>20</td>
+</tr>
+<tr>
+<td>8</td>
+<td>cc</td>
+<td>30</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="事务一-1"><a href="#事务一-1" class="headerlink" title="事务一:"></a>事务一:</h4><hr>
+<pre><code>    begin;
+    -- 实际SQL
+    update test_deadlock set age=age+10 where id=1 or id=3;
+    
+    -- 拆分SQl
+    update test_deadlock set age=age+10 where id=1 
+    
+    update test_deadlock set age=age+10 where id=3
+    
+    commit;
+    ROLLBACK;
+</code></pre>
+<hr>
+<h4 id="事务二-1"><a href="#事务二-1" class="headerlink" title="事务二:"></a>事务二:</h4><hr>
+<pre><code>    begin;
+    -- 实际SQL
+    update test_deadlock set age=age+10 where name=&#39;bb&#39; or name=&#39;aa&#39;;
+    
+    -- 拆分SQl
+    update test_deadlock set age=age+10 where name=&#39;bb&#39;;
+    
+    update test_deadlock set age=age+10 where name=&#39;aa&#39;;
+    
+    commit;
+    ROLLBACK;
+</code></pre>
+<hr>
+<p>由于这种模拟方法比较随机，不能保证一定复现死锁场景，我们暂且把它拆分成两条SQL<br>拆分只会就很容易看出来如何产生死锁<br>事务一: 获取锁id=1<br>事务二：获取锁id=3<br>事务一: 等待事务二释放锁id=3<br>事务二: 等待事务一释放锁id=1</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
