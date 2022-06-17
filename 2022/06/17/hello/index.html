@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>API文档 | Hexo</title>
-  <meta name="keywords" content=" hexo , 3-hexo ">
-  <meta name="description" content="API文档 | Hexo">
+  <title>hello | Hexo</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="hello | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hello">
@@ -488,36 +488,19 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-视频/Api" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">API文档</h1>
+        <h1 class="article-title">hello</h1>
     
     <div class="article-meta">
         
         
         
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="其他">其他</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color5">hexo</a>
-            
-            <a class="color2">3-hexo</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-06-15 22:30:16'>2017-03-23 15:13</time>
+            Created At : <time class="date" title='Updated At: 2022-06-17 11:21:38'>2022-06-17 11:15</time>
         
     </div>
     <div class="article-meta">
@@ -539,7 +522,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%88%97%E8%A1%A8"><span class="toc-text">接口列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E8%AF%A6%E6%83%85"><span class="toc-text">接口详情</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -555,202 +538,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="接口列表"><a href="#接口列表" class="headerlink" title="接口列表"></a>接口列表</h2><table>
-<thead>
-<tr>
-<th>接口</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="#strategy">/p/global/strategy</a></td>
-<td>请求全局策略</td>
-</tr>
-<tr>
-<td><a href="#login">/p/user/userLogin</a></td>
-<td>用户登录接口</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<hr>
-<p>##错误码列表<br>|  错误码  | 说明 |<br>|—— |—– |<br>|   0   | 正确 |<br>|   1   | 错误 |<br>|   2   | 参数错误|</p>
-<h2 id="接口详情"><a href="#接口详情" class="headerlink" title="接口详情"></a>接口详情</h2><ul>
-<li><span id = "strategy">全局策略</span><ul>
-<li><p>接口地址：/p/global/strategy</p>
-</li>
-<li><p>返回格式：Json</p>
-</li>
-<li><p>请求方式：Post</p>
-</li>
-<li><p>请求示例：<a target="_blank" rel="noopener" href="http://www.baidu.com/p/global/strategy">http://www.baidu.com/p/global/strategy</a></p>
-</li>
-<li><p>接口备注：通过用户信息，请求获得全局策略。</p>
-</li>
-<li><p>请求参数说明：</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>marking</td>
-<td>string</td>
-<td>true</td>
-<td>企业标识</td>
-</tr>
-<tr>
-<td><font color=red>account</td>
-<td>string</td>
-<td>true</td>
-<td>用户名</td>
-</tr>
-<tr>
-<td><font color=red>pw</td>
-<td>string</td>
-<td>true</td>
-<td>用户密码</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>返回参数说明：</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>rt</td>
-<td>int</td>
-<td>状态码</td>
-</tr>
-<tr>
-<td>data</td>
-<td>object</td>
-<td>具体数据</td>
-</tr>
-<tr>
-<td>identify_method</td>
-<td>int</td>
-<td>登录方式</td>
-</tr>
-<tr>
-<td>send_url</td>
-<td>string</td>
-<td>推送地址</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>JSON返回示例：</p>
-<pre><code>   &#123;
-       &quot;rt&quot;: 0,
-       &quot;data&quot;: &#123;
-           &quot;identify_method&quot;: &quot;3&quot;,
-           &quot;send_url&quot;: &quot;www.jianshu.com&quot;
-       &#125;
-   &#125;
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><span id = "login">登录接口</span><ul>
-<li><p>接口地址：/p/global/login</p>
-</li>
-<li><p>返回格式：Json</p>
-</li>
-<li><p>请求方式：Post</p>
-</li>
-<li><p>请求示例：<a target="_blank" rel="noopener" href="http://www.baidu.com/p/global/strategy">http://www.baidu.com/p/global/strategy</a></p>
-</li>
-<li><p>接口备注：通过用户信息，请求获得全局策略。</p>
-</li>
-<li><p>请求参数说明：</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>marking</td>
-<td>string</td>
-<td>true</td>
-<td>企业标识</td>
-</tr>
-<tr>
-<td><font color=red>account</td>
-<td>string</td>
-<td>true</td>
-<td>用户名</td>
-</tr>
-<tr>
-<td><font color=red>pw</td>
-<td>string</td>
-<td>true</td>
-<td>用户密码</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>返回参数说明：</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>rt</td>
-<td>int</td>
-<td>状态码</td>
-</tr>
-<tr>
-<td>data</td>
-<td>object</td>
-<td>具体数据</td>
-</tr>
-<tr>
-<td>identify_method</td>
-<td>int</td>
-<td>登录方式</td>
-</tr>
-<tr>
-<td>send_url</td>
-<td>string</td>
-<td>推送地址</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>JSON返回示例：</p>
-<pre><code>   &#123;
-       &quot;rt&quot;: 0,
-       &quot;data&quot;: &#123;
-           &quot;identify_method&quot;: &quot;3&quot;,
-           &quot;send_url&quot;: &quot;www.jianshu.com&quot;
-       &#125;
-   &#125;
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
+        <p> <img src="/.com//mdk.png" alt="性能对比"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
