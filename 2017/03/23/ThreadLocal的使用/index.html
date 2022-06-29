@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>git常见问题 | Blog</title>
-  <meta name="keywords" content=" git ">
-  <meta name="description" content="git常见问题 | Blog">
+  <title>ThreadLocal的使用 | Blog</title>
+  <meta name="keywords" content=" 常见问题 , 问题 ">
+  <meta name="description" content="ThreadLocal的使用 | Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="更新Jar包中的指定文件12# 外部目录conf&#x2F;init.properties必须与test.jar内部相对路径相同jar -uvf test.jar conf&#x2F;init.properties      使用RAR更新执行文件参考：WinRAR命令行版本 rar.exe使用详解 - lbnnbs - 博客园 (cnblogs.com) 12rar a Pictures.rar Bitmaps\a">
 <meta property="og:type" content="article">
@@ -608,9 +608,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-git常见问题" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-ThreadLocal的使用" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">git常见问题</h1>
+        <h1 class="article-title">ThreadLocal的使用</h1>
     
     <div class="article-meta">
         
@@ -620,7 +620,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="工具">工具</a>
+            <a  data-rel="常见问题">常见问题</a>
             
         </span>
         
@@ -628,14 +628,16 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color4">git</a>
+            <a class="color5">常见问题</a>
+            
+            <a class="color3">问题</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-06-17 14:09:00'>2017-03-23 15:13</time>
+            Created At : <time class="date" title='Updated At: 2022-06-23 16:37:48'>2017-03-23 15:13</time>
         
     </div>
     <div class="article-meta">
@@ -657,7 +659,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">1. git常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-text">2. git常用操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E7%94%9F%E4%BA%A7ssh%E5%85%AC%E7%A7%81%E9%92%A5"><span class="toc-text">3.1. 生产ssh公私钥</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">3. 常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%9D%91%EF%BC%9Assh-connect-to-host-github-com-port-22-Connection-refused"><span class="toc-text">3.1. 坑：ssh: connect to host github.com port 22: Connection refused</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%9D%91%EF%BC%9AGitHub-Unknown-SSL-protocol-error-in-connection-to-github-com-443"><span class="toc-text">3.2. 坑：GitHub: Unknown SSL protocol error in connection to github.com:443</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ThreadLocal-%E6%A6%82%E5%BF%B5"><span class="toc-text">ThreadLocal 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E4%BE%8BBean%E7%9A%84%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F"><span class="toc-text">单例Bean的线程安全问题了解吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A"><span class="toc-text">常见的解决方案：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E5%9C%BA%E6%99%AF"><span class="toc-text">实际场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E6%97%B6%E8%A7%A3%E5%86%B3%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E7%9A%84%E5%81%9A%E6%B3%95"><span class="toc-text">平时解决线程安全问题的做法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E6%89%80%E8%AF%B4%E7%9A%84%E5%AF%B9%E8%B1%A1%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E6%8C%87%E4%BB%80%E4%B9%88"><span class="toc-text">我们所说的对象线程安全问题指什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ThreadLocal%E7%89%B9%E6%80%A7"><span class="toc-text">ThreadLocal特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98"><span class="toc-text">并发问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E5%8E%9F%E5%AD%90%E6%80%A7CopyOnWhite"><span class="toc-text">如何保证原子性CopyOnWhite</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -673,23 +675,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-git常用命令"><a href="#1-git常用命令" class="headerlink" title="1. git常用命令"></a>1. git常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init  // 初始化</span><br><span class="line">hexo clean //清除一下缓存</span><br><span class="line">hexo g  //生成静态页面</span><br><span class="line">hexo s //开启本地服务器</span><br><span class="line">hexo d //部署</span><br></pre></td></tr></table></figure>
+        <h2 id="ThreadLocal-概念"><a href="#ThreadLocal-概念" class="headerlink" title="ThreadLocal 概念"></a>ThreadLocal 概念</h2><h2 id="单例Bean的线程安全问题了解吗？"><a href="#单例Bean的线程安全问题了解吗？" class="headerlink" title="单例Bean的线程安全问题了解吗？"></a>单例Bean的线程安全问题了解吗？</h2><p>我们常用的单例Bean实际上是存在线程安全问题的，对与有状态的单例Bean，在多线程共同操作一个对象的时候，是存在资源竞争的情况的？</p>
+<h2 id="常见的解决方案："><a href="#常见的解决方案：" class="headerlink" title="常见的解决方案："></a>常见的解决方案：</h2><ol>
+<li>在Bean中尽量避免定义可变的成员变量</li>
+<li>在类中定义一个ThreadLocal成员变量，将需要的成员变量保存在Threadlocal 中</li>
+</ol>
+<p>我们平时使用过程中为什么很少使用到ThreadLocal呢？</p>
+<p>大多是时候，我们使用的单例Bean都是无状态的，比如Dao、Service这种情况，Bean是线程安全的</p>
+<h2 id="实际场景"><a href="#实际场景" class="headerlink" title="实际场景"></a>实际场景</h2><p>下面是一段拦截器设置登录信息Bean的工具类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 用户 or 平台登录信息上下文管理</span><br><span class="line"> */</span><br><span class="line">public class LoginContextHolder &#123;</span><br><span class="line"></span><br><span class="line">    private static ThreadLocal&lt;BaseUserDetails&gt; loginContextThreadLocal = new ThreadLocal&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    public static BaseUserDetails getLoginContext() &#123;</span><br><span class="line">        return loginContextThreadLocal.get() == null ? null : loginContextThreadLocal.get();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void setLoginContext(BaseUserDetails userDetails) &#123;</span><br><span class="line">        loginContextThreadLocal.set(userDetails);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void removeLoginContext() &#123;</span><br><span class="line">        loginContextThreadLocal.remove();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-git常用操作"><a href="#2-git常用操作" class="headerlink" title="2. git常用操作"></a>2. git常用操作</h2><h3 id="3-1-生产ssh公私钥"><a href="#3-1-生产ssh公私钥" class="headerlink" title="3.1. 生产ssh公私钥"></a>3.1. 生产ssh公私钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;GitHub 用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;GitHub 邮箱&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成公私钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;GitHub 邮箱&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制id_rsa.pub公钥内容到github</span></span><br><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证公私钥是否匹配</span></span><br><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>我们平时写法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 用户 or 平台登录信息上下文管理</span><br><span class="line"> */</span><br><span class="line">public class LoginContextHolder &#123;</span><br><span class="line"></span><br><span class="line">    private static BaseUserDetails baseUserDetails = new BaseUserDetails();</span><br><span class="line">    public static BaseUserDetails getLoginContext() &#123;</span><br><span class="line">        return baseUserDetails == null ? null : this.baseUserDetails;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void setLoginContext(BaseUserDetails userDetails) &#123;</span><br><span class="line">        LoginContextHolder.baseUserDetails = userDetails;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> 平时写法仔细观看，是存在线程安全的</p>
+<p>单例模式升级版：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 用户 or 平台登录信息上下文管理</span><br><span class="line"> */</span><br><span class="line">public class LoginContextHolder &#123;</span><br><span class="line"></span><br><span class="line">    private static BaseUserDetails baseUserDetails = new BaseUserDetails();</span><br><span class="line"></span><br><span class="line">    public static BaseUserDetails getLoginContext() &#123;</span><br><span class="line">        return baseUserDetails == null ? null : new BaseUserDetails();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void synchronized setLoginContext(BaseUserDetails userDetails) &#123;</span><br><span class="line">        LoginContextHolder.baseUserDetails = userDetails;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="3-常见问题"><a href="#3-常见问题" class="headerlink" title="3. 常见问题"></a>3. 常见问题</h2><h3 id="3-1-坑：ssh-connect-to-host-github-com-port-22-Connection-refused"><a href="#3-1-坑：ssh-connect-to-host-github-com-port-22-Connection-refused" class="headerlink" title="3.1. 坑：ssh: connect to host github.com port 22: Connection refused"></a>3.1. 坑：ssh: connect to host github.com port 22: Connection refused</h3><p>报错现象</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git pull</span><br><span class="line">ssh: connect to host github.com port 22: Connection refused</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br><span class="line">​</span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
+<h2 id="平时解决线程安全问题的做法"><a href="#平时解决线程安全问题的做法" class="headerlink" title="平时解决线程安全问题的做法"></a>平时解决线程安全问题的做法</h2><p>常见解决线程安全的方式有synchronized、volatile等方式，但synchronized对性能的开销大，volatile不能保证原子性，所以这里介绍一个 <strong>解决多线程间共享变量的线程安全问题</strong> 的方法——ThreadLocal</p>
+<h2 id="我们所说的对象线程安全问题指什么"><a href="#我们所说的对象线程安全问题指什么" class="headerlink" title="我们所说的对象线程安全问题指什么"></a>我们所说的对象线程安全问题指什么</h2><p>指的是并发读写同时进行的时候，读取到不完整的对象信息，所以需要添加volatile或者synchronized</p>
+<h2 id="ThreadLocal特性"><a href="#ThreadLocal特性" class="headerlink" title="ThreadLocal特性"></a>ThreadLocal特性</h2><p>快照度，副本读，并发读写时，可以读取到副本信息（完整的对象信息）</p>
+<h2 id="并发问题"><a href="#并发问题" class="headerlink" title="并发问题"></a>并发问题</h2><h3 id="如何保证原子性CopyOnWhite"><a href="#如何保证原子性CopyOnWhite" class="headerlink" title="如何保证原子性CopyOnWhite"></a>如何保证原子性CopyOnWhite</h3><p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/136428913">再谈 copy-on-write - 知乎 (zhihu.com)</a></p>
+<p>copy-on-write 是计算机领域相当经典的优化思想，当然你如果问一个Java 开发者 copy-on-write 有什么作用？他们往往第一反应就是：优雅地解决<strong>读多写少</strong>场景下的并发问题。</p>
+<p>确实，众所周知，多线程环境下会出现 data race 的问题，我们以 Java 中的 ArrayList 为例，ArrayList 本身是不保证线程安全的，通常情况，要保证多线程环境下不出问题，就要给 ArrayList 加上读写锁，读要读锁，写要写锁，读与读之间不互斥，读与写之间要互斥，写与写之间也要互斥。</p>
+<p>然而，对于读多写少的场景来说，频繁地读取必然导致频繁地加锁，而与写互斥的情况却很少出现，这似乎有点不『经济』，这时候 CopyOnWriteArrayList（以下简称 COWList） 就登场了。COWList 的总体设计思想是在读的过程中去掉了锁，而在写的过程中则需要引入互斥锁，但是这个锁不会影响到读本身，也就进一步释放了读的性能瓶颈。</p>
+<p>代码中可以看到三个重要的关键点：</p>
+<ol>
+<li>COWList 读操作是无锁的；</li>
+<li>COWList 写与写之间是互斥的；</li>
+<li>底层持有的数组变量 array 是通过 volatile 修饰的。</li>
+</ol>
+<p>JMM 的 happens-before 语义保证了 volatile 变量的内存可见性，这使得任意线程在任意时间点读取 array 变量的时候都能保证读到最新值；而写的过程中，除了互斥保证以外，还需要将 array 数组拷贝一个副本出来，对副本进行修改后再将该副本的引用赋值给 array 变量，以替换原先的引用，而这个替换过程是原子性的。</p>
 
-<p>解决方案</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.ssh/config</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add section below to it</span></span><br><span class="line">Host github.com</span><br><span class="line">  Hostname ssh.github.com</span><br><span class="line">  Port 443</span><br></pre></td></tr></table></figure>
-
-<p>验证</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi xxxxx! You&#x27;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-2-坑：GitHub-Unknown-SSL-protocol-error-in-connection-to-github-com-443"><a href="#3-2-坑：GitHub-Unknown-SSL-protocol-error-in-connection-to-github-com-443" class="headerlink" title="3.2. 坑：GitHub: Unknown SSL protocol error in connection to github.com:443"></a>3.2. 坑：GitHub: Unknown SSL protocol error in connection to github.com:443</h3><p>解决方案</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --add http.sslVersion tlsv1.0</span><br></pre></td></tr></table></figure>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>

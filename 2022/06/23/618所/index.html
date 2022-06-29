@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>git常见问题 | Blog</title>
-  <meta name="keywords" content=" git ">
-  <meta name="description" content="git常见问题 | Blog">
+  <title>Blog</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="更新Jar包中的指定文件12# 外部目录conf&#x2F;init.properties必须与test.jar内部相对路径相同jar -uvf test.jar conf&#x2F;init.properties      使用RAR更新执行文件参考：WinRAR命令行版本 rar.exe使用详解 - lbnnbs - 博客园 (cnblogs.com) 12rar a Pictures.rar Bitmaps\a">
 <meta property="og:type" content="article">
@@ -608,34 +608,17 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-git常见问题" class="article article-type-post" itemscope itemprop="blogPost">
-    
-        <h1 class="article-title">git常见问题</h1>
+        <article id="post-618所" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
         
         
         
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="工具">工具</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color4">git</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-06-17 14:09:00'>2017-03-23 15:13</time>
+            Created At : <time class="date" title='Updated At: 2022-06-25 18:09:17'>2022-06-23 16:37</time>
         
     </div>
     <div class="article-meta">
@@ -657,7 +640,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">1. git常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-text">2. git常用操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E7%94%9F%E4%BA%A7ssh%E5%85%AC%E7%A7%81%E9%92%A5"><span class="toc-text">3.1. 生产ssh公私钥</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">3. 常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%9D%91%EF%BC%9Assh-connect-to-host-github-com-port-22-Connection-refused"><span class="toc-text">3.1. 坑：ssh: connect to host github.com port 22: Connection refused</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%9D%91%EF%BC%9AGitHub-Unknown-SSL-protocol-error-in-connection-to-github-com-443"><span class="toc-text">3.2. 坑：GitHub: Unknown SSL protocol error in connection to github.com:443</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0Jar%E5%8C%85%E4%B8%AD%E7%9A%84%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6"><span class="toc-text">更新Jar包中的指定文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8RAR%E6%9B%B4%E6%96%B0%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6"><span class="toc-text">使用RAR更新执行文件</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -673,23 +656,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-git常用命令"><a href="#1-git常用命令" class="headerlink" title="1. git常用命令"></a>1. git常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init  // 初始化</span><br><span class="line">hexo clean //清除一下缓存</span><br><span class="line">hexo g  //生成静态页面</span><br><span class="line">hexo s //开启本地服务器</span><br><span class="line">hexo d //部署</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-git常用操作"><a href="#2-git常用操作" class="headerlink" title="2. git常用操作"></a>2. git常用操作</h2><h3 id="3-1-生产ssh公私钥"><a href="#3-1-生产ssh公私钥" class="headerlink" title="3.1. 生产ssh公私钥"></a>3.1. 生产ssh公私钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;GitHub 用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;GitHub 邮箱&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成公私钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;GitHub 邮箱&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制id_rsa.pub公钥内容到github</span></span><br><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证公私钥是否匹配</span></span><br><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h1 id="更新Jar包中的指定文件"><a href="#更新Jar包中的指定文件" class="headerlink" title="更新Jar包中的指定文件"></a>更新Jar包中的指定文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 外部目录conf/init.properties必须与test.jar内部相对路径相同</span><br><span class="line">jar -uvf test.jar conf/init.properties</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="3-常见问题"><a href="#3-常见问题" class="headerlink" title="3. 常见问题"></a>3. 常见问题</h2><h3 id="3-1-坑：ssh-connect-to-host-github-com-port-22-Connection-refused"><a href="#3-1-坑：ssh-connect-to-host-github-com-port-22-Connection-refused" class="headerlink" title="3.1. 坑：ssh: connect to host github.com port 22: Connection refused"></a>3.1. 坑：ssh: connect to host github.com port 22: Connection refused</h3><p>报错现象</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git pull</span><br><span class="line">ssh: connect to host github.com port 22: Connection refused</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br><span class="line">​</span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
 
-<p>解决方案</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.ssh/config</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add section below to it</span></span><br><span class="line">Host github.com</span><br><span class="line">  Hostname ssh.github.com</span><br><span class="line">  Port 443</span><br></pre></td></tr></table></figure>
 
-<p>验证</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi xxxxx! You&#x27;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure>
+<h1 id="使用RAR更新执行文件"><a href="#使用RAR更新执行文件" class="headerlink" title="使用RAR更新执行文件"></a>使用RAR更新执行文件</h1><p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lbnnbs/p/3904246.html">WinRAR命令行版本 rar.exe使用详解 - lbnnbs - 博客园 (cnblogs.com)</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rar a Pictures.rar Bitmaps\a.txt</span><br><span class="line">rar f Pictures.rar Bitmaps\a.txt</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-2-坑：GitHub-Unknown-SSL-protocol-error-in-connection-to-github-com-443"><a href="#3-2-坑：GitHub-Unknown-SSL-protocol-error-in-connection-to-github-com-443" class="headerlink" title="3.2. 坑：GitHub: Unknown SSL protocol error in connection to github.com:443"></a>3.2. 坑：GitHub: Unknown SSL protocol error in connection to github.com:443</h3><p>解决方案</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --add http.sslVersion tlsv1.0</span><br></pre></td></tr></table></figure>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>

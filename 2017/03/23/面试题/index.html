@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>面试题 | Blog</title>
+  <meta name="keywords" content=" 面试 ">
+  <meta name="description" content="面试题 | Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="更新Jar包中的指定文件12# 外部目录conf&#x2F;init.properties必须与test.jar内部相对路径相同jar -uvf test.jar conf&#x2F;init.properties      使用RAR更新执行文件参考：WinRAR命令行版本 rar.exe使用详解 - lbnnbs - 博客园 (cnblogs.com) 12rar a Pictures.rar Bitmaps\a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog">
+<meta property="og:url" content="http://example.com/2022/06/23/618%E6%89%80/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="更新Jar包中的指定文件12# 外部目录conf&#x2F;init.properties必须与test.jar内部相对路径相同jar -uvf test.jar conf&#x2F;init.properties      使用RAR更新执行文件参考：WinRAR命令行版本 rar.exe使用详解 - lbnnbs - 博客园 (cnblogs.com) 12rar a Pictures.rar Bitmaps\a">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-06-23T08:37:35.640Z">
+<meta property="article:modified_time" content="2022-06-25T10:09:17.971Z">
+<meta property="article:author" content="deke Ma">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>deke Ma</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="instagram"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="reddit"
+               href="https://www.reddit.com/user/yelog/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-reddit"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="weibo"
+               href="http://weibo.com/u/2307534817"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/ff56736de7cf"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/jaytp/activities"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:jaytp@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=88151013"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(12)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        
+                        工具
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="数据库">
+                        
+                        数据库
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="常见问题">
+                        
+                        常见问题
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="复习">
+                        
+                        复习
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="面试">
+                        
+                        面试
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="其他">
+                        
+                        其他
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="网络">
+                        
+                        网络
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="12">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>常见问题</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>复习</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工具</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>教程</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>面试</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>脑图</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>视频</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据库</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>思维</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>锁</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>网络</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>问题</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>学习路线</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>知识点</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Api</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>demo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>IO</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="All "
+           href="/2022/06/23/618%E6%89%80/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2022-06-23 16:37:35">2022/06/23</span>
+        </a>
+        
+        <a  class="All 复习 "
+           href="/2017/03/23/%E5%A4%8D%E4%B9%A0/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"
+           data-tag="脑图,思维,学习路线"
+           data-author="" >
+            <span class="post-title" title="知识图谱">知识图谱</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="All 复习 "
+           href="/2017/03/23/%E5%A4%8D%E4%B9%A0/%E5%A4%8D%E4%B9%A0/"
+           data-tag="复习,知识点"
+           data-author="" >
+            <span class="post-title" title="知识点复习">知识点复习</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="All 数据库 "
+           href="/2017/03/23/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%94%81/"
+           data-tag="数据库,锁"
+           data-author="" >
+            <span class="post-title" title="数据库锁">数据库锁</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="All 其他 "
+           href="/2017/03/23/%E8%A7%86%E9%A2%91/Api/"
+           data-tag="Api"
+           data-author="" >
+            <span class="post-title" title="API文档">API文档</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="All 其他 "
+           href="/2017/03/23/%E8%A7%86%E9%A2%91/%E8%A7%86%E9%A2%91/"
+           data-tag="视频,demo"
+           data-author="" >
+            <span class="post-title" title="视频小demo">视频小demo</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="All 网络 "
+           href="/2017/03/23/%E7%BD%91%E7%BB%9C/"
+           data-tag="网络,IO"
+           data-author="" >
+            <span class="post-title" title="网络">网络</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="All 工具 "
+           href="/2017/03/23/git%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git常见问题">git常见问题</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="All 工具 "
+           href="/2017/03/23/hexo%E6%95%99%E7%A8%8B/"
+           data-tag="hexo,工具,教程"
+           data-author="" >
+            <span class="post-title" title="hexo博客搭建教程">hexo博客搭建教程</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="All 常见问题 "
+           href="/2017/03/23/OOM%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/"
+           data-tag="常见问题,问题"
+           data-author="" >
+            <span class="post-title" title="OOM问题排查">OOM问题排查</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="All 常见问题 "
+           href="/2017/03/23/ThreadLocal%E7%9A%84%E4%BD%BF%E7%94%A8/"
+           data-tag="常见问题,问题"
+           data-author="" >
+            <span class="post-title" title="ThreadLocal的使用">ThreadLocal的使用</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="All 面试 "
+           href="/2017/03/23/%E9%9D%A2%E8%AF%95%E9%A2%98/"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="面试题">面试题</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-面试题" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">面试题</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="面试">面试</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">面试</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2022-06-28 22:37:27'>2017-03-23 15:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%AD%E8%AE%AF%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">1. 中讯面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B"><span class="toc-text">JVM内存模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8%EF%BC%9A"><span class="toc-text">程序计数器：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A0%88"><span class="toc-text">虚拟机栈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%E6%A0%88"><span class="toc-text">本地方法栈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A0%86"><span class="toc-text">堆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E5%8C%BA"><span class="toc-text">方法区</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B-%E6%A0%91%E5%92%8CB%E6%A0%91%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">B+树和B树的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-text">为什么使用线程池</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%BB%E8%A6%81%E8%A7%A3%E5%86%B3%E5%93%AA%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="toc-text">分布式系统主要解决哪些问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95"><span class="toc-text">数据库索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9E%E6%87%82select-x2F-poll-x2F-epoll"><span class="toc-text">搞懂select&#x2F;poll&#x2F;epoll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mysql%E7%9B%B8%E5%85%B3"><span class="toc-text">Mysql相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9A%BE%E9%A2%98"><span class="toc-text">开发中遇到的最大难题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-text">常见的性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jvm%E8%B0%83%E4%BC%98"><span class="toc-text">jvm调优</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL%E4%BC%98%E5%8C%96-x2F-%E9%87%8D%E5%BB%BA%E7%B4%A2%E5%BC%95"><span class="toc-text">SQL优化&#x2F;重建索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MQ%E8%A7%A3%E8%80%A6"><span class="toc-text">MQ解耦</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3"><span class="toc-text">Java基础相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#B-%E6%A0%91%E4%B8%8E%E7%BA%A2%E9%BB%91%E6%A0%91"><span class="toc-text">B+树与红黑树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HashMap%E7%9B%B8%E5%85%B3"><span class="toc-text">HashMap相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="toc-text">进程间的通信方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E7%93%B6%E9%A2%88"><span class="toc-text">系统性能瓶颈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3"><span class="toc-text">数据库相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-text">Redis相关问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RPC%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8"><span class="toc-text">RPC远程调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90"><span class="toc-text">项目分析</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-中讯面试题"><a href="#1-中讯面试题" class="headerlink" title="1. 中讯面试题"></a>1. 中讯面试题</h2><h3 id="JVM内存模型"><a href="#JVM内存模型" class="headerlink" title="JVM内存模型"></a>JVM内存模型</h3><p><img src="D:\workspace\study\Blog\source_posts\面试题\1656152414487.png" alt="1656152414487"></p>
+<h4 id="程序计数器："><a href="#程序计数器：" class="headerlink" title="程序计数器："></a>程序计数器：</h4><ol>
+<li>很小的一块内存空间，只要用来记录字节码指令执行的位置</li>
+<li>每个线程都有自己的程序计数器</li>
+<li>做多线程切换时，程序计数器可以用来记录上次执行的字节码指令位置</li>
+</ol>
+<h4 id="虚拟机栈"><a href="#虚拟机栈" class="headerlink" title="虚拟机栈"></a>虚拟机栈</h4><ol>
+<li>在内存模型中主要用来描述方法的调用</li>
+<li>每个方法的执行都会创建一个栈帧，用来存储局部变量表、操作数栈、动态链接、方法出入口等信息</li>
+<li>方法的调用过程，对应栈帧的入栈出栈过程</li>
+<li>一般此区域会产生两种异常：<ol>
+<li>StackOverflowError（线程请求的栈深度大于虚拟机允许的深度）</li>
+<li>OutOfMemoryError （如果虚拟机可以动态扩展，如果无法申请到足够内存）</li>
+</ol>
+</li>
+</ol>
+<h4 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h4><ol>
+<li>和虚拟机栈的作用相似</li>
+<li>不同点是虚拟机栈是记录虚拟机执行方法的过程，本地方法栈是记录native本地方法执行的过程</li>
+</ol>
+<h4 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h4><ol>
+<li>heap是OOM故障的发源地</li>
+<li>存储着几乎所有的实例变量</li>
+<li>由垃圾回收器自动回收管理</li>
+<li>各个子线程共享使用</li>
+<li>在内存模型中占用的空间也是最大的</li>
+<li>堆内存大小可以设置成固定的也可以设置成动态调整的（-Xms设定初始值、-Xmx设定最大值）</li>
+</ol>
+<h4 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h4><ol>
+<li>所有线程共享使用的区域</li>
+<li>用来存储被虚拟机加载的类信息、常量、静态变量、JIT（just in time即时编译技术）编译后的代码等数据。</li>
+<li>运行时常量池也是方法区的一部分，用来存放编译时期生成的各种字面量和符号引用</li>
+</ol>
+<h3 id="B-树和B树的区别"><a href="#B-树和B树的区别" class="headerlink" title="B+树和B树的区别"></a>B+树和B树的区别</h3><ol>
+<li>B树的特点<ol>
+<li>B 树本质上一棵平衡树（不是平衡二叉树）</li>
+<li>每个节点上可以存储多个元素</li>
+<li>每个节点（非叶子节点）既存指针也存数据</li>
+<li>每个叶子节点到根节点的距离相同</li>
+</ol>
+</li>
+<li>B树的添加</li>
+<li>B树的删除</li>
+<li>B+树的特点</li>
+<li>B+树的添加</li>
+<li>B+树的删除</li>
+<li>总结<ol>
+<li>B+树的非叶子节点不存储数据，那么可以存储更多的数据，使得树的高度更矮，查询速度更快</li>
+<li>B+树的叶子节点之间通过链表与相邻节点相连，插入与删除更加方便快捷，无需通过父节点移动元素</li>
+<li>B+树的查询能力更加稳定，数据都在叶子节点，高度相同（B树的查询能力就不那么稳定了，因为非叶子节点也存储了数据）</li>
+</ol>
+</li>
+</ol>
+<h3 id="为什么使用线程池"><a href="#为什么使用线程池" class="headerlink" title="为什么使用线程池"></a>为什么使用线程池</h3><ol>
+<li>为什么使用线程池<ol>
+<li>我们平时使用Java开发，是支持多线程运行运行的，而线程的生命周期又包括：创建、就绪、运行、阻塞、销毁等过程，线程的创建与销毁是非常损耗性能的，假如我们每个请求任务都对应一个线程的话，对系统将会是极大的开销（线程的创建与销毁、CPU的上下文切换、内存溢出等情况），并且若是无限制的开辟线程处理任务，也会导致OOM的发生。</li>
+</ol>
+</li>
+<li>线程池的原理<ol>
+<li>线程池是线程的一个集合</li>
+<li>需要使用线程的时候，之间从线程池获取，省去了线程的创建与销毁过程</li>
+<li>初始化线程池时会根据配置的核心线程数，初始化一些核心线程</li>
+<li>当任务数量大于核心线程数量时，就会把任务放置到阻塞队列中</li>
+<li>当阻塞队列满时，会再开辟新线程来出来刚添加的任务（直到达到最大线程数量）</li>
+<li>线程达到最大线程数量时，则开始进行拒接策略（直接拒绝并抛异常、开辟新线程处理、忽略此任务、删除一个最老的任务并把当前任务添加到队列）</li>
+</ol>
+</li>
+<li>线程池核心参数<ol>
+<li>corePoolSize 核心线程数</li>
+<li>maxPoolSize 最大线程数</li>
+<li>queueCapacity 阻塞队列workQueue的大小</li>
+<li>keepAliveTime 线程空闲最大等待时间（回收等待时间）</li>
+<li>allowCoreThreadTimeout 运行核心线程超时（设置为true时，核心线程达到空闲时间临界值也会回收）</li>
+<li>rejectedExecutionHandler 任务拒绝处理器</li>
+</ol>
+</li>
+<li>线程池的种类<ol>
+<li>newFixedThreadPool(int n) 获取固定数量的线程池</li>
+<li>newCachedThreadPool() 获取动态数量的线程池，如果不够则创建新的，无上限</li>
+<li>newSingThreadExecutor() 获取单个线程的线程池，只有一个线程</li>
+<li>newScheduledThreadPool() 创建固定大小的线程池，可以延时周期执行定时任务</li>
+</ol>
+</li>
+</ol>
+<h3 id="分布式系统主要解决哪些问题"><a href="#分布式系统主要解决哪些问题" class="headerlink" title="分布式系统主要解决哪些问题"></a>分布式系统主要解决哪些问题</h3><ol>
+<li>分布式解决的问题<ol>
+<li>解决了扩展问题，一般传企业都是采用垂直扩展，通过扩充CPU、内存、磁盘来提高该机器的处理能力，但是这种垂直扩展是有限度的，而且是昂贵的。分布式方案可以通过搭建集群，把廉价的机器组合在一起，统一进行资源调度，来提高任务的处理能力。</li>
+<li>解决了高可用问题</li>
+<li>降低了数据的延时性（通过策略，访问就近的集群）</li>
+</ol>
+</li>
+<li>分布式的主要挑战<ol>
+<li>数据一致性问题</li>
+</ol>
+</li>
+</ol>
+<h3 id="数据库索引"><a href="#数据库索引" class="headerlink" title="数据库索引"></a>数据库索引</h3><ol>
+<li>索引概述<ol>
+<li>索引是为了提高数据库访问速度而产生的</li>
+<li>底层采用的是一种平衡树的数据结构（B树、B+树）</li>
+</ol>
+</li>
+<li>索引特点<ol>
+<li>避免了全表扫描，只扫描较少的索引页和数据页，而不是查询所有的数据页</li>
+<li>聚集索引可以避免数据的插入操作，集中于表的最后一个数据页（排序操作）</li>
+<li>在某些情况下，索引可以避免排序操作</li>
+</ol>
+</li>
+<li>聚集索引<ol>
+<li>没加主键的表，在磁盘上的存储是杂乱无章的</li>
+<li>加了主键的表，在磁盘上的存储是一排排的整整齐齐</li>
+<li>既是给表加了主键之后，整个表就变成了一个索引，也就是所谓的聚集索引</li>
+<li>一张表只能又一个主键、一个聚集索引，因为主键的作用就是把表的数据结构转化为索引（平衡树）的数据格式</li>
+<li>聚集索引的所有节点都是由主键字段中的数据构成的，通常是主键的ID字段</li>
+<li>在数据库里面，所有行都会按照主键索引进行排序</li>
+</ol>
+</li>
+<li>非聚集索引<ol>
+<li>非聚集索引和聚集索引一样， 同样是采用平衡树作为索引的数据结构</li>
+<li>给普通字段上添加索引</li>
+<li>非聚集索引的所有节点都是存储的主键值，想要通过非聚集索引查询数据的话，需要二次查询（先查出主键值，再通过聚集索引查询数据）</li>
+</ol>
+</li>
+<li>覆盖索引<ol>
+<li>可以避免非聚集索引的二次查询</li>
+<li>查找字段刚好是创建的复合索引，可以直接查出数据</li>
+</ol>
+</li>
+</ol>
+<h3 id="搞懂select-x2F-poll-x2F-epoll"><a href="#搞懂select-x2F-poll-x2F-epoll" class="headerlink" title="搞懂select&#x2F;poll&#x2F;epoll"></a>搞懂select&#x2F;poll&#x2F;epoll</h3><p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/471492153">搞懂 select&#x2F;poll&#x2F;epoll，就这篇了 - 知乎 (zhihu.com)</a></p>
+<ol>
+<li>select特点<ol>
+<li>一个线程管理众多的socket链接</li>
+<li>调用select的时候，会把所有管理的socket的fd传到内核中</li>
+<li>socket会有属于自己的睡眠队列，select安排一个内应，即被管理的socket睡眠队列里面塞一个entry（当socket接收到网卡数据之后，就会去它的睡眠队列中遍历entry, 调用entry的callback方法唤醒select）</li>
+<li>被唤醒的select并不知道是那个socket有数据了，仍然会遍历所有socket</li>
+<li>select的限制，因为socket fd需要从用户空间copy到内核空间，为了控制拷贝的大小而做了限制，即是每个select能copy的fds集合大小只有1024</li>
+</ol>
+</li>
+<li>poll的特点<ol>
+<li>优化了fds的存储接口，select是有的是bit数组，poll使用了pollfd（可以解决1024的限制）</li>
+</ol>
+</li>
+<li>epoll的特点<ol>
+<li>epoll做了两点优化<ol>
+<li>无需像select复制fds到内核，新增或删除socket的时候就调用epoll_ctl，直接在内核中管理socket集合</li>
+<li>唤醒之后，无需像select那也遍历所有的socket，直接遍历ready_list链表（callback 里面会把当前的 socket 加入到 ready_list 然后唤醒 epoll）</li>
+</ol>
+</li>
+<li>ET与LT<ol>
+<li>ET，边沿触发<ol>
+<li>照上面的逻辑就是 epoll 遍历 ready_list 的时候，会把 socket 从 ready_list 里面移除，然后读取这个 scoket 的事件</li>
+</ol>
+</li>
+<li>LT，水平触发<ol>
+<li>在这个模式下 epoll 遍历 ready_list 的时候，会把 socket 从 ready_list 里面移除，然后读取这个 scoket 的事件，<strong>如果这个 socket 返回了感兴趣的事件，那么当前这个 socket 会再被加入到 ready_list 中，这样下次调用 epoll_wait 的时候，还能拿到这个 socket。</strong></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="Mysql相关"><a href="#Mysql相关" class="headerlink" title="Mysql相关"></a>Mysql相关</h3><p>参考：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/qKGUiglWF0EWcnFOlU3JBA">https://mp.weixin.qq.com/s/qKGUiglWF0EWcnFOlU3JBA</a></p>
+<ol>
+<li><p>Mysql体系结构</p>
+<ol>
+<li><p>可以分为两大块：server与存储引擎</p>
+</li>
+<li><p>SQl语句的执行流程</p>
+<ol>
+<li>客户端与Server建立链接后，一条Sql语句经过TCP从客户端传输到Server</li>
+<li>Server对Sql语句进行词法、语法分析（词法<strong>分析器</strong>）</li>
+<li>语法没问题之后，通过<strong>优化器</strong>对Sql进行重写（如何选择驱动表、如何选择合适的索引等），目的是让Sql可以更高效的执行（我们平时使用explain查看的执行计划，其实就是优化器帮我们优化后的执行方案）</li>
+<li>优化之后，就由<strong>执行器</strong>调用存储引擎接口来执行语句了</li>
+</ol>
+</li>
+<li><p><strong>关键点</strong></p>
+<p>例如我现在要执行一条<code>select * from yes where name=&#39;yes的练级攻略&#39;;</code>这条语句，name 这一列没有索引。</p>
+<p>此时流程如下：</p>
+<ol>
+<li>Server 调用存储引擎的<code>返回这个表的第一行</code>这个接口，此时 Server 拿到第一行数据。</li>
+<li>Server 通过 where 条件判断 name 是否等于<code>yes的练级攻略</code>，如果是则放到结果集中，不是则跳过。</li>
+<li>Server 继续调用存储引擎的接口<code>来下一行！</code>，然后再通过 where 条件来判断。</li>
+<li>如此循环往复，直到最后一行记录。</li>
+<li>不会等结果全部收集完毕了才返回给客户端，等集满<code>net_buffer</code>大小的结果就会发送，也就是<strong>边查边发</strong>。</li>
+</ol>
+<p>思考：</p>
+<p>​	1.若是Mysql不是采用边查边发的方案，那么多查询都要缓存全部数据，数据库内存早就撑爆了</p>
+<p>​	2.查询条件不是索引的时候，返回的是这个表的第一行数据，若是索引的话，返回的是符合条件的第一行数据（因此使用索引可以更快的查询出正确的数据）</p>
+</li>
+</ol>
+</li>
+<li><p>InnoDB与MyISAM存储引擎</p>
+<ol>
+<li><p>Mysql 5.5.8之前，一直使用的是MyISAM存储引擎</p>
+</li>
+<li><p>MyISAM存储引擎特点</p>
+<ol>
+<li>不支持事务</li>
+<li>不支持行级锁，只支持表锁</li>
+<li>适用于OLAP的场景（读多写少、查询分析类的场景）</li>
+<li>它的数据和索引是分离的（不在一个文件上存储），并且数据库只会缓存索引数据，数据文件由操作系统缓存</li>
+<li>MyISAM存储引擎也使用的是B+树，只是不像InnoDB一样叶子节点存储完整数据，它的节点只存储索引，所以对它来说主键索引与非主键索引没什么区别</li>
+</ol>
+</li>
+<li><p>InnoDB存储引擎的特点</p>
+<ol>
+<li>支持事务，实现了四种隔离级别的事务，利用MVCC来支持高并发</li>
+<li>默认的事务隔离级别是RR可重复读</li>
+<li>支持行锁，间隙锁</li>
+<li>利用行锁+间隙锁，可以避免幻读的能力</li>
+<li>支持数据崩溃后的数据安全恢复</li>
+<li>InnoDB 的主键索引称之为聚簇索引，也就是说数据和索引是存储在一起的</li>
+<li>InnoDB 的辅助索引只存储索引值+主键ID</li>
+<li>查询时若是辅助索引不能覆盖查询列时，就需要通过主键ID进行<strong>回表</strong></li>
+</ol>
+<p>总结：</p>
+<p>​	InnoDB之所以能成为数据库默认引擎，主要是对事务的支持、和崩溃后的数据安全恢复，比较出名的时MVCC、next-key lock、redolog、undolog；</p>
+<p>​	数据库事务通常也是借助日志来实现，常见的undo log、redo log，undo&#x2F;redo log都能保证事务特性，这里主要是原子性和持久性，即事务相关的操作，要么全做，要么不做，并且修改的数据能得到持久化。</p>
+</li>
+</ol>
+</li>
+<li><p>日志</p>
+<ol>
+<li>二进制日志 BingLog</li>
+<li>重做日志 Redolog<ol>
+<li>宕机恢复时，对于已提交的事务重新执行</li>
+</ol>
+</li>
+<li>回滚日志 UndoLog<ol>
+<li>宕机恢复时，对于未提交的事务进行回滚</li>
+</ol>
+</li>
+<li>还有慢查询日志、错误日志、查询日志等</li>
+</ol>
+</li>
+<li><p>索引</p>
+<ol>
+<li>主键索引（聚簇索引）</li>
+<li>非主键索引（辅助索引）</li>
+<li>最左匹配</li>
+<li>联合索引</li>
+<li>覆盖索引</li>
+<li>索引下推<ol>
+<li>查询条件是多个且都是索引时，可以根据左边的查询结果进行过滤</li>
+<li>可以避免老版本（5.6之前先回表再过滤），查询左侧条件之后的回表操作（查询的结果都回表）</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="开发中遇到的最大难题"><a href="#开发中遇到的最大难题" class="headerlink" title="开发中遇到的最大难题"></a>开发中遇到的最大难题</h3><ol>
+<li>OOM问题</li>
+<li>分布式数据一致性问题</li>
+</ol>
+<h2 id="常见的性能优化"><a href="#常见的性能优化" class="headerlink" title="常见的性能优化"></a>常见的性能优化</h2><h3 id="jvm调优"><a href="#jvm调优" class="headerlink" title="jvm调优"></a>jvm调优</h3><ol>
+<li>加内存、调整年轻代老年代比例、调整垃圾收集器</li>
+<li>代码逻辑优化，避免聚合数据、产生大对象</li>
+</ol>
+<h3 id="SQL优化-x2F-重建索引"><a href="#SQL优化-x2F-重建索引" class="headerlink" title="SQL优化&#x2F;重建索引"></a>SQL优化&#x2F;重建索引</h3><ol>
+<li>使用上<ol>
+<li>使用索引</li>
+<li>尽量使用索引覆盖</li>
+<li>避免全表扫描</li>
+<li>避免关联查询</li>
+<li>避免隐式转换</li>
+</ol>
+</li>
+<li>架构上<ol>
+<li>分库分表（数据拆分）</li>
+<li>数据分区（查有效热点数据）</li>
+</ol>
+</li>
+<li>创建表时<ol>
+<li>使用自增主键</li>
+</ol>
+</li>
+</ol>
+<h3 id="MQ解耦"><a href="#MQ解耦" class="headerlink" title="MQ解耦"></a>MQ解耦</h3><p>使用事件总线模型对业务进行解耦</p>
+<h2 id="Java基础相关"><a href="#Java基础相关" class="headerlink" title="Java基础相关"></a>Java基础相关</h2><h3 id="B-树与红黑树"><a href="#B-树与红黑树" class="headerlink" title="B+树与红黑树"></a>B+树与红黑树</h3><h3 id="HashMap相关"><a href="#HashMap相关" class="headerlink" title="HashMap相关"></a>HashMap相关</h3><ol>
+<li>HashMap数据结构</li>
+<li>HashMap是否线程安全，如果需要使用线程安全怎么做？<ol>
+<li>使用CurrentHashMap</li>
+<li>或者使用Collections.SynchronizedMap对当前Map进行封装</li>
+</ol>
+</li>
+<li>对比HashMap、HashTable、和CurrentHashMap的区别和使用场景</li>
+</ol>
+<h3 id="进程间的通信方式"><a href="#进程间的通信方式" class="headerlink" title="进程间的通信方式"></a>进程间的通信方式</h3><ol>
+<li>管道</li>
+<li>匿名管道</li>
+<li>信号</li>
+<li>信号量</li>
+<li>消息队列</li>
+<li>共享内存</li>
+<li>套接字</li>
+</ol>
+<h3 id="系统性能瓶颈"><a href="#系统性能瓶颈" class="headerlink" title="系统性能瓶颈"></a>系统性能瓶颈</h3><p>主要围绕三个方面</p>
+<p>​	1.CPU</p>
+<p>​	2.内存</p>
+<p>​	3.IO</p>
+<h2 id="数据库相关"><a href="#数据库相关" class="headerlink" title="数据库相关"></a>数据库相关</h2><ol>
+<li>Mysql索引介绍<ol>
+<li>聚集索引（结合InnoDB与MyISAM）</li>
+<li>非聚集索引</li>
+<li>联合索引</li>
+<li>覆盖索引</li>
+<li>索引下推</li>
+<li>索引失效</li>
+<li>索引选择（优化器怎么选择索引）<ol>
+<li>参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/25-lH/p/10973309.html">《Mysql - 优化器是如何选择索引的？》</a></li>
+<li>一条语句一般会命中多个索引</li>
+<li>优化器的选择原则<ol>
+<li>在数据库里面，扫描行数是影响执行代价的因素之一。</li>
+<li>扫描的行数越少，意味着访问磁盘数据的次数越少，消耗的 CPU 资源越少。</li>
+<li>当然，扫描行数并不是唯一的判断标准，优化器还会结合是否使用临时表、是否排序等因素进行综合判断。</li>
+</ol>
+</li>
+<li>优化器如何判断扫描行数<ol>
+<li>统计索引的区分度</li>
+<li>使用<strong>采样统计</strong>的方式，粗略的估计扫描行</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>为什么使用B+树而不使用B树</li>
+<li>聚集索引与非聚集索引（从存储引擎上进行分析）</li>
+<li>数据库为什么会默认创建主键索引<ol>
+<li>InnoDB存储引擎的数据结构决定</li>
+<li>InnoDB存储引擎的主键索引和数据是存在一起的，使用B+树的数据结构</li>
+<li>数据是存储在叶子节点的，所以InnoDB存储引擎必须得有主键</li>
+</ol>
+</li>
+<li>Mysql主键设计（推荐使用自增Id）<ol>
+<li>使用自增Id，可以有序的在数据页尾部进行插入，页满的时候直接开辟新的数据页</li>
+<li>无需移动数据</li>
+<li>使用非自增Id的话（数据在数据页中非连续存储，插入数据的时候可能会插入到中间位置，导致页裂移动数据）</li>
+</ol>
+</li>
+</ol>
+<h2 id="Redis相关问题"><a href="#Redis相关问题" class="headerlink" title="Redis相关问题"></a>Redis相关问题</h2><ol>
+<li>Redis的集群模式</li>
+<li>Redis的主从同步</li>
+<li>Redis做缓存时的数据一致性问题（<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/cea3a88e0d88">如何保证redis缓存与数据一致性问题 - 简书 (jianshu.com)</a>）<ol>
+<li>是先更新缓存中的数据再更新数据库的数据；</li>
+<li>尽量保持数据的最终一致性吧<ol>
+<li>先更新数据库数据，再更新缓存数据</li>
+<li>如果更新缓存失败了，不管原来的缓存存不存在，只要是到了过期时间，那么再次读操作的时候，就会从数据库中读取数据，然后更新到缓存中。</li>
+<li>先删缓存，再更新数据库，需要考虑并发问题<ol>
+<li>这种处理方式，可能会有如下情况，线程A，写入(更新)数据时，先删除缓存后，同时，有一个线程B，此时去读数据，先去缓存中读，此时刚被线程A删除了，于是去数据库读还未被线程A更新的数据，这时候就会读到脏数据了。  紧接着，线程B会把脏数据写入缓存，而线程A会把更新后的数据写入数据库。导致缓存与数据不一致。</li>
+<li>处理方式:<ol>
+<li>双删策略（先删缓存、更新数据库、休眠1s再次删除缓存（删除1s内产生的咱数据））</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>先更新数据，再更新缓存<ol>
+<li>线程A先执行，线程B后执行。线程A先查询时，去缓存读取时，缓存失效了，此时继续去数据库读，这时候线程B修改数据库后，把数据写入缓存了。在此之后，线程A才执行把数据写入缓存中，此时缓存中的任然是脏数据。</li>
+<li>分为以下几个步骤:<br>（1）缓存刚好失效<br>（2）请求A查询数据库，得一个旧值<br>（3）请求B将新值写入数据库<br>（4）请求B删除缓存<br>（5）请求A将查到的旧值写入缓存</li>
+<li>如果一定需要做控制的话，可以考虑以下几点:<ol>
+<li>做redis过期策略。(时间上不好控制)</li>
+<li>上面说的延迟删除策略。(删除不一定成功)</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Redis分布式锁<ol>
+<li>尽量使用Redission框架</li>
+<li>自己实现分布式锁要考虑的点<ol>
+<li>互斥，同一时刻只能有一个线程持有锁</li>
+<li>防止死锁，设置持有锁的过期时间内</li>
+<li>可重入，同一线程可多次持有锁</li>
+<li>锁续期，防止任务处理时间 &gt; 锁过期时间</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Redis常见问题<ol>
+<li>雪崩<ol>
+<li>大量的key同时失效（原因很多），大量请求打到数据库上，可能导致数据库崩溃</li>
+<li>大量key同时失效的原因<ol>
+<li>redis服务挂掉</li>
+<li>对缓存数据设置了相同的过期时间</li>
+</ol>
+</li>
+<li>解决方案：<ol>
+<li>搭建高可用的Redis集群（Redis Cluster 或者 Redis Sentinel(哨兵) 等方案）</li>
+<li>缓存时间加上一个随机值，避免某一时间缓存集中失效</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>穿透<ol>
+<li>大量请求一个不存在的数据，Redis内存屏障失效，请求直接落到数据库上，导致数据库崩溃</li>
+<li>解决方案：<ol>
+<li>使用布隆过滤器(Bloom Filter)过滤掉非法请求</li>
+<li>缓存空数据</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>击穿<ol>
+<li>热点数据，在失效的那一瞬间，大量的请求打到数据库上</li>
+<li>解决方案：<ol>
+<li>让热点Key永不过期</li>
+<li>使用互斥锁，通过Redis的setnx实现（同一时刻只能有一个请求去请求数据库，等这个请求将mysql的内容加载到缓存，其他请求就能从缓存中获取数据了）</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="RPC远程调用"><a href="#RPC远程调用" class="headerlink" title="RPC远程调用"></a>RPC远程调用</h2><ol>
+<li>RPC调用过程</li>
+<li>结合Dubbo进行分析</li>
+<li>结合Netty进行分析</li>
+</ol>
+<h2 id="项目分析"><a href="#项目分析" class="headerlink" title="项目分析"></a>项目分析</h2><ol>
+<li>业务场景</li>
+<li>性能数据</li>
+<li>问题难点</li>
+<li>性能瓶颈</li>
+</ol>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
